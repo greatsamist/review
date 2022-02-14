@@ -1,10 +1,7 @@
 @import "./components/variable/Variable.scss";
 
-.container {
-}
-
 .header {
-  margin-top: 3rem;
+  margin: 3rem 0;
 
   &__heading {
     text-align: center;
@@ -17,4 +14,11 @@
     height: 0.25rem;
     background: $primary;
   }
+}
+
+.content {
+  margin: auto;
+  width: 90vw;
+  max-width: 500px;
+  background: $primary-light;
 }

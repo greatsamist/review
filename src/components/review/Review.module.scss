@@ -1,0 +1,42 @@
+@import "../variable/Variable.scss";
+
+.review {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+
+  &__imgContain {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+
+  &__img {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    margin: 1rem auto;
+    border-radius: 50%;
+    object-fit: contain;
+  }
+
+  &__name {
+    font-size: 1rem;
+    text-transform: lowercase;
+
+    &::first-line {
+      text-transform: capitalize;
+    }
+  }
+
+  &__job {
+    color: $primary;
+    text-transform: uppercase;
+  }
+
+  &__text {
+  }
+}
