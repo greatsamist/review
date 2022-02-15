@@ -39,4 +39,22 @@
 
   &__text {
   }
+
+  &__btnContain {
+    margin-bottom: 10px;
+  }
+
+  &__prevBtn,
+  &__nextBtn {
+    font-family: inherit;
+    font-size: 1.4rem;
+    color: $primary;
+    border: none;
+  }
+
+  &__surprise {
+    margin: auto;
+    border: none;
+    font-family: inherit;
+  }
 }
