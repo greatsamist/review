@@ -12,13 +12,15 @@
     margin: 0.75rem auto;
     width: 5rem;
     height: 0.25rem;
-    background: $primary;
+    background: $primary-dark;
   }
 }
 
 .content {
   margin: auto;
   width: 90vw;
-  max-width: 500px;
-  background: $primary-light;
+  max-width: 570px;
+  background: $color-white;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
 }

@@ -24,6 +24,8 @@
   }
 
   &__name {
+    margin-top: 0;
+    margin-bottom: 0;
     font-size: 1rem;
     text-transform: lowercase;
 
@@ -33,7 +35,9 @@
   }
 
   &__job {
-    color: $primary;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: $primary-dark;
     text-transform: uppercase;
   }
 
@@ -48,13 +52,33 @@
   &__nextBtn {
     font-family: inherit;
     font-size: 1.4rem;
-    color: $primary;
+    color: $primary-dark;
     border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: $primary;
+      border: 1px solid $primary-dark;
+    }
   }
 
   &__surprise {
     margin: auto;
-    border: none;
+    padding: 0.2rem;
     font-family: inherit;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    border: none;
+    color: $primary-dark;
+    background: $primary-light;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: $primary;
+      background: $primary-dark;
+    }
   }
 }
