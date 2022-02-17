@@ -6,7 +6,7 @@ import { FaChevronLeft, FaChevronRight, FaQuoteRight } from "react-icons/fa";
 function Review() {
   const [reviews, setReviews] = useState(0);
   const { image, job, name, text } = data[reviews];
-  console.log(data.length - 1);
+
   const checkNumber = (number) => {
     if (number > data.length - 1) {
       return 0;
@@ -14,17 +14,19 @@ function Review() {
     if (number < 0) {
       return data.length - 1;
     }
+    return number;
+  };
+
+  const nextPersonHandler = () => {
+    setReviews((reviews) => {
+      let newReview = reviews + 1;
+      return checkNumber(newReview);
+    });
   };
 
   const prevPersonHandler = () => {
     setReviews((reviews) => {
       let newReview = reviews - 1;
-      return checkNumber(newReview);
-    });
-  };
-  const nextPersonHandler = () => {
-    setReviews((reviews) => {
-      let newReview = reviews + 1;
       return checkNumber(newReview);
     });
   };
