@@ -12,15 +12,42 @@
     width: 150px;
     height: 150px;
     border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: $primary;
+      position: absolute;
+      top: -0.25rem;
+      right: -0.5rem;
+      border-radius: 50%;
+    }
   }
 
   &__img {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    margin: 1rem auto;
+    width: 100%;
+    display: block;
+    height: 100%;
+    object-fit: cover;
     border-radius: 50%;
-    object-fit: contain;
+    position: relative;
+    background: $primary;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    transform: translateY(25%);
+    background: $primary;
   }
 
   &__name {

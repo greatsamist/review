@@ -10,10 +10,9 @@ function Review() {
   const checkNumber = (number) => {
     if (number > data.length - 1) {
       return 0;
-    } else if (number < 0) {
-      return data.length + 1;
-    } else {
-      return 2;
+    }
+    if (number < 0) {
+      return data.length - 1;
     }
   };
 
@@ -30,14 +29,20 @@ function Review() {
     });
   };
 
-  const surpriseMeHandler = () => {};
+  const surpriseMeHandler = () => {
+    let randomNumber = Math.floor(Math.random() * data.length);
+    if (randomNumber === reviews) {
+      randomNumber = reviews + 1;
+    }
+    setReviews(checkNumber(randomNumber));
+  };
 
   return (
     <article>
       <div className={Styles.review}>
         <div className={Styles["review__imgContain"]}>
           <img className={Styles["review__img"]} src={image} alt="" />
-          <span className={Styles["quote-icon"]}>
+          <span className={Styles["review__icon"]}>
             <FaQuoteRight />
           </span>
         </div>
